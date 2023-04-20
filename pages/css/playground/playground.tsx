@@ -2,16 +2,18 @@ import { Flex, chakra, Text, Center, Image, Box } from "@chakra-ui/react";
 
 export const Playground = () => {
   return (
-    <PageContainer gap="40px">
+    <PageContainer gap="10px">
       <Center>
-        <Text>Testing</Text>
+        <Text>Centered</Text>
       </Center>
-      <Flex textAlign={"center"} flexDir={"row"}>
+      <Flex alignSelf={"center"} flexDir={"row"}>
         <Text display="inline-block" position="relative">
           Centered
           <Image
             h="20px"
-            // position={"absolute"}
+            position={"absolute"}
+            right="-20px"
+            top="5px"
             src="https://www.freeiconspng.com/uploads/cute-rabbit-png-12.png"
             alt=""
           />
@@ -19,7 +21,7 @@ export const Playground = () => {
       </Flex>
       <Flex justifyContent={"center"} borderWidth={1} borderColor={"red"}>
         <Text display="inline-block" position="relative">
-          Looks at this text
+          Centered
           <Box
             bgColor="yellow"
             boxSize="10px"
@@ -29,13 +31,17 @@ export const Playground = () => {
           />
         </Text>
       </Flex>
-      <Flex
-        flexDir={"row"}
-        alignSelf={"center"}
-        borderWidth={1}
-        borderColor={"lightblue"}
-      >
-        <Text>Looks at this text2</Text>
+      <Flex alignSelf={"center"} borderWidth={1} borderColor={"lightblue"}>
+        <Text display="inline-block" position="relative">
+          Centered
+          <Box
+            bgColor="yellow"
+            boxSize="10px"
+            position="absolute"
+            right="-20px"
+            top="7px"
+          />
+        </Text>
       </Flex>
     </PageContainer>
   );
